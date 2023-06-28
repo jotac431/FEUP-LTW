@@ -1,0 +1,51 @@
+.mode columns
+.headers on
+.nullvalue NULL
+
+drop table if exists Users;
+drop table if exists Departments;
+drop table if exists Tickets;
+drop table if exists FAQ;
+
+-- Create the Users table
+CREATE TABLE Users (
+    user_id 	INTEGER 	PRIMARY KEY AUTOINCREMENT,
+    username	TEXT 	NOT NULL UNIQUE,
+    password 	TEXT 	NOT NULL,
+    name 	TEXT 	NOT NULL,
+    email 	TEXT 	NOT NULL UNIQUE,
+    role 	TEXT 	NOT NULL 	CHECK (role IN ('client', 'agent', 'admin')),
+    
+    CONSTRAINT CHECK_Users_email	CHECK (email LIKE '%_@__%.__%')
+);
+
+-- Create the Departments table
+CREATE TABLE Departments (
+    dept_id 	INTEGER PRIMARY KEY AUTOINCREMENT,
+    name 	TEXT NOT NULL UNIQUE
+);
+
+-- Create the Tickets table
+CREATE TABLE Tickets (
+    ticket_id 		INTEGER PRIMARY KEY AUTOINCREMENT,
+    client_id 		INTEGER NOT NULL REFERENCES Users(user_id),
+    agent_id 		INTEGER REFERENCES Users(user_id),
+    dept_id 		INTEGER NOT NULL REFERENCES Departments(dept_id),
+    subject 		TEXT NOT NULL,
+    description 	TEXT NOT NULL,
+    status 		TEXT NOT NULL 	 CHECK (status IN ('open', 'assigned', 'closed')),
+    priority 		INTEGER NOT NULL CHECK (priority BETWEEN 1 AND 5),
+    created_date	TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP,
+    last_modified	TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP
+);
+
+-- Create the FAQ table
+CREATE TABLE FAQ (
+    faq_id INTEGER PRIMARY KEY AUTOINCREMENT,
+    question TEXT NOT NULL UNIQUE,
+    answer TEXT NOT NULL
+);
+
+
+INSERT INTO Users (username, password, name, email, role) 
+VALUES ('john_doe', 'password123', 'John Doe', 'johndoe@email.com', 'client');

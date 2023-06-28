@@ -1,0 +1,314 @@
+html {
+    background-color: rgb(204, 205, 207);
+}
+
+html,
+body {
+    max-width: 100%;
+    overflow-x: hidden;
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+header {
+    background-color: #000000;
+    color: #fff;
+    padding: 20px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+
+main {
+    margin-bottom: 5%;
+}
+
+h1 {
+    margin: 0;
+    font-size: 36px;
+}
+
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: row;
+}
+
+nav li {
+    margin-right: 20px;
+}
+
+nav li a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+nav li a:hover {
+    color: #ccc;
+}
+
+nav div {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+nav div a {
+    background-color: #fff;
+    color: #333;
+    padding: 10px 20px;
+    margin-left: 10px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+nav div a:hover {
+    background-color: #ccc;
+    color: #fff;
+}
+
+footer {
+    background-color: black;
+    color: white;
+    width: 100%;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    clear: both;
+    min-height: 3.75em;
+}
+
+.btn {
+    display: inline-block;
+    padding: 10px 20px;
+    font-size: 18px;
+    text-decoration: none;
+    background-color: #979590;
+    color: #000000;
+    border-radius: 5px;
+    border: 2px solid #000000;
+    box-shadow: 0px 3px 5px rgba(0, 0, 0, 0.2);
+    transition: background-color 0.3s ease;
+    cursor: pointer;
+    margin-left: 2%;
+}
+
+.btn:hover {
+    background-color: #ffffff;
+}
+
+.create_ticket {
+    max-width: 400px;
+    margin: 3%;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+input {
+    margin: 1%;
+}
+
+.register_content {
+    padding-top: 3%;
+    width: 20%;
+    margin: auto;
+}
+
+input[type="text"], input[type="password"], input[type = "email"],
+textarea {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    margin: 1%;
+    margin-bottom: 5%;
+}
+
+select {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    margin: 1%;
+    margin-bottom: 5%;
+}
+
+input[type="submit"], button[type="submit"] {
+    display: inline-block;
+    padding: 10px 20px;
+    font-size: 15px;
+    text-decoration: none;
+    background-color: #979590;
+    color: #000000;
+    border-radius: 5px;
+    border: 2px solid #000000;
+    box-shadow: 0px 3px 5px rgba(0, 0, 0, 0.2);
+    transition: background-color 0.3s ease;
+    cursor: pointer;
+    margin-left: 2%;
+}
+
+input[type="submit"]:hover, button[type="submit"]:hover{
+    background-color: #ffffff;
+}
+
+form {
+    margin: 2%;
+}
+
+a {
+    color: #fff;
+    text-decoration: none;
+}
+
+span {
+    font-size: 13px;
+    color: #333;
+}
+
+section {
+    margin-bottom: 20px;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+}
+
+h2 {
+    margin: 20px;
+    margin-top: 0;
+    font-size: 1.5em;
+    margin-bottom: 15px;
+}
+
+#ticket-info label {
+    font-weight: bold;
+    display: block;
+    margin-bottom: 5px;
+}
+
+#comment-form textarea {
+    width: 100%;
+    resize: vertical;
+    margin-bottom: 10px;
+}
+
+#comment-form button {
+    background-color: #333;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#comment-form button:hover {
+    background-color: #555;
+}
+
+#comment-list {
+    list-style-type: none;
+    padding: 0;
+}
+
+#comment-list li {
+    background-color: #f5f5f5;
+    border: 1px solid #ccc;
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+}
+
+#ticket-details {
+    border: 1px solid #ccc;
+    padding: 10px;
+}
+
+#ticket-details h2 {
+    font-size: 20px;
+    color: #333;
+}
+
+#ticket-info {
+    background-color: #bababa;
+    margin: 2%;
+    padding: 2%;
+    border-radius: 1%;
+}
+
+#ticket-info span {
+    display: inline-block;
+    margin-bottom: 5px;
+}
+
+#ticket-department {
+    font-weight: bold;
+    color: #454545;
+}
+
+#ticket-subject {
+    color: #000000;
+    font-weight: bold;
+    font-size: x-large;
+}
+
+#ticket-description {
+    color: #000000;
+    font-size: medium;
+    margin-top: 2%;
+}
+
+#ticket-status {
+    font-weight: bold;
+    color: #cc0000;
+}
+
+#ticket-comment {
+    margin-top: 20px;
+}
+
+#ticket-comment h2 {
+    font-size: 20px;
+    color: #333;
+}
+
+#comment-list {
+    list-style-type: none;
+    padding: 0;
+}
+
+.comment-item {
+    margin-bottom: 10px;
+}
+
+.comment-username {
+    font-weight: bold;
+}
+
+.comment-role {
+    color: #888;
+    margin-right: 5px;
+}
+
+.comment-text {
+    color: #333;
+    display: block;
+    margin-top: 5px;
+}
+
+#comment-form textarea {
+    width: 100%;
+    resize: vertical;
+}
+
+#comment-form button {
+    margin-top: 10px;
+}
+
