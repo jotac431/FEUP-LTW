@@ -1,5 +1,5 @@
 # FEUP LTW
-Projects for the Web Languages and Technologies (LTW) class of the Bachelors in Informatics and Computer Engineering (LEIC) at the Faculty of Engineering of the University of Porto (FEUP).
+Project for the Web Languages and Technologies (LTW) class of the Bachelors in Informatics and Computer Engineering (LEIC) at the Faculty of Engineering of the University of Porto (FEUP).
 
 Made by: <br>
 [Jorge Costa](https://github.com/jotac431) up201706518 <br>
